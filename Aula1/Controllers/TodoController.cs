@@ -4,18 +4,21 @@ namespace Aula1.Controllers
 {
     public class TodoController : ControllerBase
     {
-        // GET: api/todo
-        [Route("api/todo")]
-        public IActionResult GetTodos() // Retorne TODAS as TODOS
+        [Route("/api/CadastroPecas")]
+        public IActionResult CadastroPecas()
         {
-            return Ok(new[] { "Comprar Ovo", "Comprar Leite", "Dar Remédio pra Doguinha" });
+            return Ok("Digite o Código da Peça: ");
         }
 
-        // GET: api/todo
-        [Route("api/todo/{id}")]
-        public IActionResult GetById(int id) // Retorne TODAS as TODOS
+        [Route("/api/CadastroClientes")]
+        public IActionResult CadastroCliente()
         {
-            return Ok(new[] { "Comprar Ovo", "Comprar Leite", "Dar Remédio pra Doguinha" });
+            return Ok("Digite o CPF do Cliente: ");
+        }
+        [Route("/api/CadastroFornecedor")]
+        public IActionResult CadastroFornecedor()
+        {
+            return Ok("Digite o CNPJ/CPF do Fornecedor: ");
         }
     }
 }
